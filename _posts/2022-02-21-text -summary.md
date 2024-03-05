@@ -71,12 +71,10 @@ In the code below, we:
 * Tokenize the sequences by creating a list. 
 * Utilize the Glove method for word representation.
 * Summarize Text
-
 <br>
 <br>
 #### Import Packages 
 ```python
-
 #import required Python packages
 
 import pandas as pd
@@ -85,18 +83,27 @@ import nltk
 nltk.download('punkt')
 import re
 from nltk.corpus import stopwords
+```
+<br>
+<br>
+### Import data
 
-# import data
+```python
 df = pd.read_csv("text_doc.csv")
 df.head()
+```
+<br>
 <br>
 
-<br>
+```python
 df['article_text'][1]
+```
+<br>
 
 <br>
 "BASEL, Switzerland (AP), Roger Federer advanced to the 14th Swiss Indoors final of his career by beating seventh-seeded Daniil Medvedev 6-1, 6-4 on Saturday. Seeking a ninth title at his hometown event, and a 99th overall, Federer will play 93th-ranked Marius Copil on Sunday. Federer dominated the 20th-ranked Medvedev and had his first match-point chance to break serve again at 5-1. He then dropped his serve to love, and let another match point slip in Medvedev's next service game by netting a backhand. He clinched on his fourth chance when Medvedev netted from the baseline. Copil upset expectations of a Federer final against Alexander Zverev in a 6-3, 6-7 (6), 6-4 win over the fifth-ranked German in the earlier semifinal. The Romanian aims for a first title after arriving at Basel without a career win over a top-10 opponent. Copil has two after also beating No. 6 Marin Cilic in the second round. Copil fired 26 aces past Zverev and never dropped serve, clinching after 2 1/2 hours with a forehand volley winner to break Zverev for the second time in the semifinal. He came through two rounds of qualifying last weekend to reach the Basel main draw, including beating Zverev's older brother, Mischa. Federer had an easier time than in his only previous match against Medvedev, a three-setter at Shanghai two weeks ago."
 <br>
+
 <br>
 # Tokenize text <a name="tokenize-text"></a>
 
@@ -110,6 +117,7 @@ sentences = [y for x in sentences for y in x]
 
 ```
 <br>
+
 <br>
 # Word embeddings <a name="word-embeddings"></a>
 
@@ -147,7 +155,6 @@ for i in clean_sentences:
   sentence_vectors.append(v)
 
 ```
-
 <br>
 <br>
 #### Find similarities between sentences using the cosine
