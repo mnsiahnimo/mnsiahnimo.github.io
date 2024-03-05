@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text Summarization with Machine Learning
-image: "/posts/pca-title-img.png"
+image: "/posts/text_summary.png"
 tags: [NLP, Text Mining, Unstructured Data, Machine Learning, Python]
 ---
 
