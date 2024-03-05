@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Michael Nsiah-Nimo
-description: "Hello, I'm Michael, a dedicated Data Scientist committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
+description: "Hello, I'm Michael, a Data Scientist committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #-------------------------------
 # About Section
@@ -21,7 +21,7 @@ avatar_image: /img/4f9792b0-b17f-4074-a995-e497061652be-removebg-preview Cropped
 #-------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/michael-nsiah-nimo-36494967/" # Add your linkedln handle
-github: "https://mnsiahnimo.github.io/"  # Add your github handle
+github: "https://mnsiahnimo/"  # Add your github handle
 
 paginate: 6
 paginate_path: "/page/:num"
