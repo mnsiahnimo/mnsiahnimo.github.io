@@ -9,8 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Michael Nsiah-Nimo
-description: "
-"Hello, I'm Michael, a dedicated Data Scientist committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
+description: "Hello, I'm Michael, a dedicated Data Scientist committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #-------------------------------
 # About Section
