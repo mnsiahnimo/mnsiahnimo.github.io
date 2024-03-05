@@ -9,10 +9,9 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Michael Nsiah-Nimo
-description: "Hi I'm Michael, and I'm a Data Scientist.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
-baseurl: "" # the subpath of your site, e.g. /blog
+description: "
+"Hello, I'm Michael, a dedicated Data Scientist committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
 #-------------------------------
 # About Section
 subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
