@@ -190,10 +190,6 @@ scores = nx.pagerank(nx_graph)
 <br>
 # Summarize Text <a name="summarize-text"></a>
 
-There is no right or wrong number of components to use - this is something that we need to decide based upon the scenario we're working in.  We know we want to reduce the number of features, but we need to trade this off with the amount of information we lose.
-
-In the following code, we extract this information from the prior step where we fit the PCA object to our training data.  We extract the variance for each component, and we do the same again, but for the *cumulative* variance.  Will will assess & plot both of these in the next step.
-
 ```python
 ranked_sentences = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)
 for i in range(5):
