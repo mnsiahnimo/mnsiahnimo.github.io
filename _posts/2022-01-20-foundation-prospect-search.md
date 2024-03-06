@@ -36,7 +36,7 @@ Actions Taken as a Data Scientist:
 #### Data Collection and Preprocessing
 Mission statements and funding guidelines were gathered from potential funding organizations focusing on health equity, minority health, and community outreach. Text data was preprocessed to remove noise, such as stopwords, punctuation, and special characters. The text was also converted to lowercase for consistency.
 
-##### Feature Extraction
+#### Feature Extraction
 NLP techniques were used to extract key features from the mission statements, including word frequencies and topics related to health equity and minority health.
 Similarity Analysis: Cosine similarity was calculated between the grant proposal's mission statement and the mission statements of potential funders to quantify alignment.
 
