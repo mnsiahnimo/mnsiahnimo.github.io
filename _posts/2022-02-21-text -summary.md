@@ -49,14 +49,13 @@ Next, we'll compute similarities between the sentences using the cosine similari
 <br>
 
 ### Results <a name="overview-results"></a>
-A minimum viable product thea will effectively generate summaties from text was built using the sample data provided by our client. This will be a pioneering effort to have a model that will thrust efficieny with providing actionable insights. 
+A prototype for a minimum viable product (MVP) has been developed using sample data provided by our client. This marks the initial steps towards creating a model capable of efficiently generating summaries from text. This endeavor represents a pioneering effort aimed at enhancing efficiency and providing actionable insights. The MVP serves as a foundation for further development and refinement, laying the groundwork for future advancements in text summarization technology for our client. 
 
 <br>
 <br>
 ### Growth/Next Steps <a name="overview-growth"></a>
 
-We will test several other  models and methods  like the Abstraction approach which aims to produce a summary by interpreting the text using advanced natural language techniques to generate a new, shorter text – parts of which may not appear in the original document, which conveys the most information.This will build upon this parsimouous yet robust model and will make our client more efficient in generating insights
-
+We're planning to explore additional models and techniques, including the Abstraction approach, in our quest to refine text summarization. Unlike the extractive approach, which selects and stitches together existing text segments, Abstraction generates a condensed summary by interpreting the text and generating new, concise content. This method leverages advanced natural language techniques to extract the most relevant information, potentially introducing novel insights not present in the original document.
 <br>
 <br>
 
