@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Summarization with Machine Learning
+title: Identifying Potential Funding Organizations Using NLP
 image: "/posts/pca-title-img.png"
 tags: [NLP, Text Mining, Unstructured Data, Machine Learning, Python]
 ---
@@ -189,8 +189,12 @@ for idx, funder in enumerate(ranked_funders, start=1):
 ```
 
 <br>
-Top 1 Funder: Foundation D - Similarity Score: 0.32
-Top 2 Funder: Foundation B - Similarity Score: 0.32
-Top 3 Funder: Foundation A - Similarity Score: 0.27
-Top 4 Funder: Foundation C - Similarity Score: 0.24
+
+| Rank |    Funder    | Similarity Score |
+|------|--------------|------------------|
+|   1  | Foundation D |       0.32       |
+|   2  | Foundation B |       0.32       |
+|   3  | Foundation A |       0.27       |
+|   4  | Foundation C |       0.24       |
+
 <br>
