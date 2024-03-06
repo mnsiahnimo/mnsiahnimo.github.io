@@ -72,8 +72,10 @@ In the code below, we:
 * Utilize the Glove method for word representation.
 * Summarize Text
 <br>
+
 <br>
 #### Import Packages 
+
 ```python
 #import required Python packages
 
@@ -84,6 +86,8 @@ nltk.download('punkt')
 import re
 from nltk.corpus import stopwords
 ```
+<br>
+<br>
 ### Import data
 
 ```python
