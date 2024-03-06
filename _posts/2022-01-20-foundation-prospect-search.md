@@ -33,9 +33,8 @@ Hispanic populations in the United States face significant health disparities, i
 
 Actions Taken as a Data Scientist:
 
-#### Data Collection
-Mission statements and funding guidelines were gathered from potential funding organizations focusing on health equity, minority health, and community outreach.
-Preprocessing: Text data was preprocessed to remove noise, such as stopwords, punctuation, and special characters. The text was also converted to lowercase for consistency.
+#### Data Collection and Preprocessing
+Mission statements and funding guidelines were gathered from potential funding organizations focusing on health equity, minority health, and community outreach. Text data was preprocessed to remove noise, such as stopwords, punctuation, and special characters. The text was also converted to lowercase for consistency.
 
 ##### Feature Extraction
 NLP techniques were used to extract key features from the mission statements, including word frequencies and topics related to health equity and minority health.
