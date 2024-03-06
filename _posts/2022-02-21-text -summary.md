@@ -86,8 +86,7 @@ import re
 from nltk.corpus import stopwords
 ```
 <br>
-<br>
-### Import data
+#### Import data
 
 ```python
 df = pd.read_csv("text_doc.csv")
