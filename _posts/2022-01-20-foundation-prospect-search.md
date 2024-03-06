@@ -67,8 +67,6 @@ It's essential to continuously monitor the landscape of funding opportunities an
 Building relationships with potential funding organizations and stakeholders within the Hispanic health community can facilitate collaboration and partnership opportunities. Engaging with key stakeholders can also provide valuable insights and support for project implementation and sustainability
 
 <br>
-<br>
-
 ___
 
 # Data Overview  <a name="data-overview"></a>
