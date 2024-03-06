@@ -16,9 +16,6 @@ NLP can be used to analyze the language used in the mission statements, funding 
     - [Results](#overview-results)
     - [Growth/Next Steps](#overview-growth)
 - [01. Data Overview](#data-overview)
-- [02. Tokenize Text](#tokenize-text)
-- [03. Word Embeddings](#word-embeddings)
-- [04. Summarize Text](#summarize-text)
 
 ___
 
