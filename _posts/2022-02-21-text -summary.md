@@ -182,7 +182,7 @@ Convert the simi_mat similarity matrix into the graph, the nodes in this graph w
 
 import networkx as nx
 
-nx_graph = nx.from_numpy_array(sim_mat)
+nx_graph = nx.from_numpy_array(simi_mat)
 scores = nx.pagerank(nx_graph)
 
 ```
