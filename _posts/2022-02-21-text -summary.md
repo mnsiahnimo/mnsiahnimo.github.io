@@ -105,7 +105,9 @@ df['article_text'][1]
 
 <br>
 # Tokenize text <a name="tokenize-text"></a>
+Tokenization is the process of breaking down a text into smaller units called tokens, which can be words, phrases, or other meaningful elements. NLTK (Natural Language Toolkit) provides a tokenization module to facilitate this task.
 
+Here's how the process of tokenizing text using NLTK's tokenization module:
 ```python
 from nltk.tokenize import sent_tokenize
 sentences = []
@@ -119,6 +121,9 @@ sentences = [y for x in sentences for y in x]
 
 <br>
 # Word embeddings <a name="word-embeddings"></a>
+Word embeddings are a type of word representation in Natural Language Processing (NLP) that maps words or phrases from a vocabulary to vectors of real numbers. These vectors capture semantic meaning, contextual relationships, and syntactic information of the words they represent. Word embeddings are typically learned from large corpora of text data using neural network-based models, such as Word2Vec, GloVe, or FastText.
+
+In our case we are going to adapt GloVe model
 
 ```python
 word_embeddings = {}
@@ -142,6 +147,7 @@ clean_sentences = [remove_stopwords(r.split()) for r in clean_sentences]
 <br>
 <br>
 ##### Create vectors for sentences
+We then represent words in a continuous vector space where similar words are mapped closer to each other. This allows for capturing relationships between words based on their context and meaning
 
 ```python
 
@@ -156,7 +162,7 @@ for i in clean_sentences:
 ```
 <br>
 <br>
-#### Find similarities between sentences using the cosine
+#### Find similarities between sentences using the cosine approach
 
 ```python
 
