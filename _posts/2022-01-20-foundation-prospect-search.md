@@ -54,6 +54,19 @@ The project successfully identified potential funding organizations that closely
 
 ### Growth/Next Steps <a name="overview-growth"></a>
 
+#### Enhancing the Model with Additional Features
+In the upcoming phases, our focus will shift towards augmenting the model with a richer set of features sourced from the database's API. By incorporating a broader range of data points and expanding the sample size, we anticipate significant improvements in the model's performance.
+
+Key areas of interest for feature enrichment will include:
+
+Mission Statements: Collecting comprehensive mission statements from potential funding organizations to gain deeper insights into their overarching objectives and focus areas.
+
+Abstracts of Recently Funded Grants: Accessing abstracts of grants recently funded by the grantmaker to understand their funding priorities and areas of interest in greater detail.
+
+Grantmaker Activities Data: Gathering data describing the grantmaker's past initiatives, collaborations, and projects to enable more precise targeting for clients searching for funding opportunities.
+
+By incorporating these additional features into our model, we aim to enhance its ability to identify funding opportunities that closely align with our clients' goals and objectives. This expanded dataset will provide a more comprehensive view of the funding landscape, enabling more informed decision-making and improved targeting strategies.
+
 #### Validation and Selection
 The next steps involve validating the identified funding opportunities by reviewing the mission statements and funding guidelines of the top-ranked organizations. This will help ensure alignment with project goals and objectives before pursuing funding applications.
 
