@@ -84,6 +84,7 @@ nltk.download('punkt')
 import re
 from nltk.corpus import stopwords
 ```
+<br>
 ### Import data
 
 ```python
