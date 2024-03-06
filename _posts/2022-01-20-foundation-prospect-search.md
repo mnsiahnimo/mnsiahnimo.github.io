@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Identifying Potential Funding Organizations Using NLP
-image: "/posts/pca-title-img.png"
+image: "/posts/foundation_dir.png"
 tags: [NLP, Text Mining, Unstructured Data, Machine Learning, Python]
 ---
 
