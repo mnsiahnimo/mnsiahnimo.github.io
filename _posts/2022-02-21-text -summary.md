@@ -91,7 +91,6 @@ from nltk.corpus import stopwords
 
 ```python
 df = pd.read_csv("text_doc.csv")
-df.head()
 ```
 
 ```python
