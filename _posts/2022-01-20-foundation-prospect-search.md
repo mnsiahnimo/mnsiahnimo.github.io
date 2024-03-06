@@ -110,10 +110,6 @@ potential_funders = [
 The grant proposal focuses on addressing Hispanic health disparities. Let's define the project's mission statement:
 
 
-```python
-grant_topic = "To improve healthcare access and outcomes for Hispanic communities by addressing social determinants of health and promoting culturally competent care."
-```
-
 #### Preprocessing
 ```python
 
