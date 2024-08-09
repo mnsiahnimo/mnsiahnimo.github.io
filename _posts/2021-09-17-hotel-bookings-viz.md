@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tracking Hotel Bookings For Park City Peaks Hotel Dashboard Using Tableau
-image: "/posts/earthquake.jpg"
+image: "/posts/Park+City+Peaks+Hotel.jpeg"
 tags: [Tableau, Data Viz]
 ---
 This is a Tableau Dashboard that tracks Hotel Bookings For Park City Peaks Hotel
