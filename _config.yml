@@ -9,7 +9,7 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Michael Nsiah-Nimo
-description: "Hello, I'm Michael, a Research Statistician and a Data Analytics Professional committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. •	Equipped with strong DevOps and cloud engineering capabilities, including building CI/CD pipelines (GitHub Actions, Jenkins), provisioning infrastructure via Terraform and Ansible, and deploying containerized analytics environments on AWS (ECS, Lambda, RDS, S3). Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
+description: "Hello, I'm Michael, a Research Statistician and a Data Analytics Professional committed to leveraging data-driven insights for driving impactful business decisions. My portfolio features projects focused on translating data into actionable strategies with a strong emphasis on delivering tangible business outcomes. Equipped with strong DevOps and cloud engineering capabilities, including building CI/CD pipelines (GitHub Actions, Jenkins), provisioning infrastructure via Terraform and Ansible, and deploying containerized analytics environments on AWS (ECS, Lambda, RDS, S3). Feel free to explore my GitHub and LinkedIn profiles or download my resume using the provided links to delve deeper into my expertise and experience!"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #-------------------------------
 # About Section
@@ -49,5 +49,6 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
