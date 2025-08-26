@@ -2,7 +2,7 @@
 layout: post
 title: Salary Analysis Project
 image: "/posts/salary-analysis-main.jpg"
-tags: [SQL,Databases,Data Filtering,Exploratory Data Analysis]
+tags: [SQL,Databases,Data Filtering,Exploratory Data Analysis,Rolling Aggregates, CTE's]
 ---
 
 # Salary Analysis Project
