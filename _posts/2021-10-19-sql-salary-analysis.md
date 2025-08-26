@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating An Image Search Engine Using Deep Learning
+title: Salary Analysis Project
 image: "/posts/salary-analysis-main.jpg"
 tags: [SQL,Databases,Data Filtering,Exploratory Data Analysis]
 ---
