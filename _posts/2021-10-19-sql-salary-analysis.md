@@ -64,6 +64,8 @@ The dataset used was the **Lahman Baseball Database**, focusing on the **salarie
 
 ## SQL Code
 
+-- Connect to database (MySQL)
+
 ### Task 1: View the salaries table
 ```sql
 SELECT * FROM salaries;
