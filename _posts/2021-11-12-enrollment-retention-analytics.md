@@ -2,7 +2,7 @@
 # Enrollment & Retention Analytics — SQL Project
 
 ## Context
-This project analyzed 5+ years of student enrollment and graduation data to support **strategic planning**, **scholarship allocation**, and **student success initiatives** at the university level.  
+This project analyzed 5+ years of student enrollment and graduation data to support **strategic planning**, **scholarship allocation**, and **student success initiatives** at the university level. 
 The goal was to build **accurate reports and dashboards** for academic leadership using SQL and Tableau.
 
 ---
