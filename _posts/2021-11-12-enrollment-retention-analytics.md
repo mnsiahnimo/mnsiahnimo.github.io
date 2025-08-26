@@ -46,6 +46,8 @@ The goal was to build **accurate reports and dashboards** for academic leadershi
 
 ## SQL Code
 
+-- Connect to database
+
 ### Task 1: Retention Rate by Cohort (Fall-to-Fall)
 ```sql
 WITH cohort AS (
