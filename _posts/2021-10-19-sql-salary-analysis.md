@@ -8,7 +8,7 @@ and key financial milestones using SQL analytics techniques like **window functi
 
 The dataset used was the **Lahman Baseball Database**, focusing on the **salaries** table with team-wise annual salary information.
 
----
+
 
 ### Actions
 1. **Data Exploration**  
@@ -26,7 +26,7 @@ The dataset used was the **Lahman Baseball Database**, focusing on the **salarie
    - Identified the **first year each team crossed $1B cumulative spending** using  
      `ROW_NUMBER()` and conditional filtering.
 
----
+
 
 ### Results
 - **Top 20% Teams:** Clear identification of teams with consistently high financial investment.  
@@ -35,7 +35,7 @@ The dataset used was the **Lahman Baseball Database**, focusing on the **salarie
 - **$1B Milestones:** Mapped the earliest year each team exceeded $1B in cumulative salaries,  
   showing the speed of financial growth across franchises.
 
----
+
 
 ### Impact
 - Provided **actionable insights** for sports economists, team analysts, and management by:
@@ -47,7 +47,7 @@ The dataset used was the **Lahman Baseball Database**, focusing on the **salarie
   - **Rolling aggregates** (`SUM OVER`)
   - **Complex filtering & CTEs**
 
----
+
 
 ### Growth / Next Steps
 1. **Integrate Performance Metrics:**  
