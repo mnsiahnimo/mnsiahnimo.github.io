@@ -39,9 +39,8 @@ The goal was to build **accurate reports and dashboards** for academic leadershi
 ---
 
 ## Growth / Next Steps
-1. Add **predictive modeling** (e.g., logistic regression) to identify students at risk of dropping out.  
-2. Automate SQL pipelines for **real-time Tableau dashboard updates**.  
-3. Integrate additional student data sources (advising, financial aid) for deeper insights.
+1. Add **predictive modeling** (e.g., logistic regression) to identify students at risk of dropping out.   
+2. Integrate additional student data sources (advising, financial aid) for deeper insights.
 
 ---
 
