@@ -1,4 +1,4 @@
-## MLB Salary Analysis Project
+## Salary Analysis Project
 
 ### Context
 Major League Baseball teams often have drastically different financial capabilities.  
