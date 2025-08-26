@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Creating An Image Search Engine Using Deep Learning
