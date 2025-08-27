@@ -130,7 +130,7 @@ ORDER BY entry_year;
 
 > SQL to calculate medians 
 
-### PostgreSQL (using `percentile_cont`)
+### (using `percentile_cont`)
 ```sql
 WITH cohort AS (
     SELECT  student_id, MIN(year_enrolled) AS entry_year
