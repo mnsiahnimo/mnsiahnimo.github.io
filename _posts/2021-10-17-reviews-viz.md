@@ -7,7 +7,7 @@ tags: [Tableau, Data Viz, Filter Cards]
 This is a Tableau Dashboard that tracks analytics on customer reviews
 <iframe seamless frameborder="0" src="https://public.tableau.com/views/GreatfitReviewDashboard_17240234772370/GreatFitReviewDashboard?:embed=yes&:display_count=yes&:showVizHome=no" width = '1500' height = '1000'></iframe>
 
-# GreatFit Review Dashboard — Brief Summary (CRAIG)
+# GreatFit Review Dashboard — Brief Summary 
 
 ### **Context**
 GreatFit is an online e-commerce store specializing in ladies' clothing, selling across multiple platforms.  
