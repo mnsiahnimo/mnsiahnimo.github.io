@@ -4,56 +4,32 @@ title: Enrollment & Retention Analytics Project
 image: "/posts/enroll-retain-analysis-main.png"
 tags: [SQL,Databases,Data Filtering,Exploratory Data Analysis,Aggregations,Window Functions]
 ---
-# Enrollment & Retention Analytics — SQL Project
 
-## Context
-This project analyzed 5+ years of student enrollment and graduation data to support **strategic planning**, **scholarship allocation**, and **student success initiatives** at the university level. 
-The goal was to build **accurate reports and dashboards** for academic leadership using SQL and Tableau.
+# Enrollment & Retention Analytics — SQL Code and Explanations
 
----
-
-## Actions
-1. **Data Preparation**  
-   - Cleaned and standardized student enrollment records across multiple academic years.  
-   - Integrated data from admissions, registrar, and financial aid systems.
-
-2. **SQL Analysis**  
-   - Used **aggregations**, **window functions**, and **conditional filtering** to derive insights on:  
-     - First-year retention rates  
-     - Graduation rates by cohort  
-     - Impact of scholarships on student outcomes  
-
-3. **Visualization Readiness**  
-   - Structured results into **Tableau-friendly tables** for interactive dashboards.  
-   - Created KPIs and trend lines for academic leadership and decision-makers.
+> **Goal:** Compute key student success metrics by cohort using SQL:
+> 1) Fall-to-Fall retention; 2) 4-year graduation rate;
+> 3) Multi-year persistence (Year-1 and Year-2); 4) Time-to-degree (median years).
 
 ---
 
-## Results
-- **Retention Trends:** Identified years with declining retention, prompting further analysis of financial and academic factors.  
-- **Graduation Benchmarks:** Produced metrics on **4-year graduation rates** by cohort for institutional reports.  
-- **Scholarship Impact:** Linked retention and graduation metrics with financial aid data to assess scholarship effectiveness.
+## Connect to Database
+*(Pseudo-step — depends on your RDBMS/driver; examples: `psql`, `mysql`, `sqlcmd`, `bq`, etc.)*
+
+```bash
+# Example (PostgreSQL)
+psql "host=<HOST> dbname=<DB> user=<USER> sslmode=require"
+```
 
 ---
 
-## Impact
-- Created **interactive Tableau dashboards** enabling administrators to drill into retention and graduation trends.  
-- Informed **policy interventions** such as targeted scholarship programs for first-generation students.  
-- Helped academic leadership align **budget decisions** with student success priorities.
+## Task 1 — Retention Rate by Cohort (Fall-to-Fall)
 
----
+**What it does:**  
+- Defines each student’s **entry cohort** as their **first year** in `enrollment`.  
+- Counts cohort members who **show up exactly one year later** (Year N → Year N+1).  
+- Outputs **retention %** per entry year.
 
-## Growth / Next Steps
-1. Add **predictive modeling** (e.g., logistic regression) to identify students at risk of dropping out.   
-2. Integrate additional student data sources (advising, financial aid) for deeper insights.
-
----
-
-## SQL Code
-
--- Connect to database
-
-### Task 1: Retention Rate by Cohort (Fall-to-Fall)
 ```sql
 WITH cohort AS (
     SELECT  student_id,
@@ -78,7 +54,12 @@ ORDER BY entry_year;
 
 ---
 
-### Task 2: Graduation Rate by Cohort (4-Year Rate)
+## Task 2 — Graduation Rate by Cohort (4-Year Rate)
+
+**What it does:**  
+- For each cohort (entry year), counts students who **graduate within 4 years**.  
+- Returns **4-year grad rate %** by cohort.
+
 ```sql
 WITH cohort AS (
     SELECT  student_id,
@@ -100,3 +81,106 @@ SELECT  entry_year,
 FROM    graduation
 ORDER BY entry_year;
 ```
+
+---
+
+## Task 3 — Multi-Year Persistence (Year-1 and Year-2) by Cohort
+
+**What it does:**  
+- Extends Task 1 by calculating **persistence** to **Year N+1** *and* **Year N+2** for each cohort.  
+- Useful to see where the biggest drop-offs happen.
+
+```sql
+WITH cohort AS (
+    SELECT  student_id,
+            MIN(year_enrolled) AS entry_year
+    FROM    enrollment
+    GROUP BY student_id
+),
+persistence AS (
+    SELECT  c.entry_year,
+            COUNT(*) AS total_students,
+            -- Persisted to Year N+1
+            SUM(CASE WHEN EXISTS (
+                    SELECT 1
+                    FROM enrollment e1
+                    WHERE e1.student_id   = c.student_id
+                      AND e1.year_enrolled = c.entry_year + 1
+                ) THEN 1 ELSE 0 END) AS persisted_y1,
+            -- Persisted to Year N+2
+            SUM(CASE WHEN EXISTS (
+                    SELECT 1
+                    FROM enrollment e2
+                    WHERE e2.student_id   = c.student_id
+                      AND e2.year_enrolled = c.entry_year + 2
+                ) THEN 1 ELSE 0 END) AS persisted_y2
+    FROM cohort c
+    GROUP BY c.entry_year
+)
+SELECT
+    entry_year,
+    ROUND(100.0 * persisted_y1 / total_students, 1) AS persist_rate_y1,
+    ROUND(100.0 * persisted_y2 / total_students, 1) AS persist_rate_y2
+FROM persistence
+ORDER BY entry_year;
+```
+
+---
+
+## Task 4 — Time-to-Degree (Median Years to Graduate) by Cohort
+
+**What it does:**  
+- For each cohort, computes **years to graduation** for those who graduated.  
+- Returns the **median time-to-degree** (and an optional distribution).
+
+> SQL to calculate medians varies by RDBMS. Below are two versions.
+
+### 4A) PostgreSQL (uses `percentile_cont`)
+```sql
+WITH cohort AS (
+    SELECT  student_id, MIN(year_enrolled) AS entry_year
+    FROM    enrollment
+    GROUP BY student_id
+),
+ttd AS (
+    SELECT  c.entry_year,
+            (g.grad_year - c.entry_year) AS years_to_degree
+    FROM    cohort c
+    JOIN    graduation g
+      ON    g.student_id = c.student_id
+)
+SELECT
+    entry_year,
+    percentile_cont(0.5) WITHIN GROUP (ORDER BY years_to_degree) AS median_years_to_degree,
+    COUNT(*) AS grads_count
+FROM ttd
+GROUP BY entry_year
+ORDER BY entry_year;
+```
+
+### 4B) MySQL 8+ (approx median via `PERCENTILE_CONT`)
+```sql
+WITH cohort AS (
+    SELECT  student_id, MIN(year_enrolled) AS entry_year
+    FROM    enrollment
+    GROUP BY student_id
+),
+ttd AS (
+    SELECT  c.entry_year,
+            (g.grad_year - c.entry_year) AS years_to_degree
+    FROM    cohort c
+    JOIN    graduation g
+      ON    g.student_id = c.student_id
+)
+SELECT
+    entry_year,
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY years_to_degree) AS median_years_to_degree,
+    COUNT(*) AS grads_count
+FROM ttd
+GROUP BY entry_year
+ORDER BY entry_year;
+```
+
+---
+
+
