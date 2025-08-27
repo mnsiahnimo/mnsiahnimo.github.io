@@ -152,9 +152,6 @@ FROM ttd
 GROUP BY entry_year
 ORDER BY entry_year;
 ```
-
-
-
 ---
 
 
