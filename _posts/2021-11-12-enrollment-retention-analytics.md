@@ -16,11 +16,6 @@ tags: [SQL,Databases,Data Filtering,Exploratory Data Analysis,Aggregations,Windo
 ## Connect to Database
 *(Pseudo-step — depends on your RDBMS/driver; examples: `psql`, `mysql`, `sqlcmd`, `bq`, etc.)*
 
-```bash
-# Example (PostgreSQL)
-psql "host=<HOST> dbname=<DB> user=<USER> sslmode=require"
-```
-
 ---
 
 ## Task 1 — Retention Rate by Cohort (Fall-to-Fall)
@@ -133,9 +128,9 @@ ORDER BY entry_year;
 - For each cohort, computes **years to graduation** for those who graduated.  
 - Returns the **median time-to-degree** (and an optional distribution).
 
-> SQL to calculate medians varies by RDBMS. Below are two versions.
+> SQL to calculate medians 
 
-### 4A) PostgreSQL (uses `percentile_cont`)
+### PostgreSQL (using `percentile_cont`)
 ```sql
 WITH cohort AS (
     SELECT  student_id, MIN(year_enrolled) AS entry_year
@@ -158,28 +153,7 @@ GROUP BY entry_year
 ORDER BY entry_year;
 ```
 
-### 4B) MySQL 8+ (approx median via `PERCENTILE_CONT`)
-```sql
-WITH cohort AS (
-    SELECT  student_id, MIN(year_enrolled) AS entry_year
-    FROM    enrollment
-    GROUP BY student_id
-),
-ttd AS (
-    SELECT  c.entry_year,
-            (g.grad_year - c.entry_year) AS years_to_degree
-    FROM    cohort c
-    JOIN    graduation g
-      ON    g.student_id = c.student_id
-)
-SELECT
-    entry_year,
-    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY years_to_degree) AS median_years_to_degree,
-    COUNT(*) AS grads_count
-FROM ttd
-GROUP BY entry_year
-ORDER BY entry_year;
-```
+
 
 ---
 
