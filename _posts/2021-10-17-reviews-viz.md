@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Great Fit Review Dashboard Using Tableau
-image: "/posts/GREATFIT LOGO.png"
+image: "/posts/great-fit-logo.png"
 tags: [Tableau, Data Viz, Filter Cards]
 ---
 This is a Tableau Dashboard that tracks analytics on customer reviews
