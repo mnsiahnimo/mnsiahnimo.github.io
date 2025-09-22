@@ -15,7 +15,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # About Section
 subtitle: Data Analytics <span style="color:#f58506"> Portfolio </span>
 location: "Lincoln, Nebraska USA"
-resume_url: /docs/MICHAELNSIAHNIMO.pdf
+resume_url: /docs/MICHAELNSIAHNIMO-RESUME.pdf
 avatar_image: /img/4f9792b0-b17f-4074-a995-e497061652be-removebg-preview Cropped.png
 
 #-------------------------------
@@ -49,6 +49,7 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
 
